@@ -1,0 +1,40 @@
+s3:
+  bucket_name: week1ws
+  region: ap-south-1
+  files:
+    data/users.json: users
+    data/products.csv: products
+    data/sales.csv: sales
+
+
+database:
+  user: postgres
+  password: aliza123
+  host: localhost
+  port: 5433
+  dbname: fde
+
+
+api:
+  endpoints:
+    https://api.example.com/sales: sales_data
+    https://api.example.com/products: products_data
+
+schemas:
+  transform_schema: transform
+  staging_schema: staging
+  target_schema: target
+
+entities:
+  sales:
+    temp_table: temp_sales
+    staging_view: vw_sales_staging
+    target_table: fact_sales
+  products:
+    temp_table: temp_products
+    staging_view: vw_products_staging
+    target_table: dim_products
+  users:
+    temp_table: temp_users
+    staging_view: vw_users_staging
+    target_table: dim_users

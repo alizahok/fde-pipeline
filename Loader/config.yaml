@@ -1,0 +1,22 @@
+# database:
+#   host: localhost
+#   port: 5433
+#   user: postgres
+#   password: aliza123
+#   dbname: fde
+
+# schemas:
+#   landing: public
+#   archive: archive
+
+# tables:
+#   s3:
+#     - lnd_customers_csv
+#     - lnd_sales_csv
+#     - lnd_products_csv
+#   api:
+#     - lnd_products_api
+#     - lnd_users_api
+#   json:
+#     - lnd_products_json
+#     - lnd_sales_json
